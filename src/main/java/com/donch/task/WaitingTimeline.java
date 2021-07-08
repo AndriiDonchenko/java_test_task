@@ -12,13 +12,13 @@ public class WaitingTimeline {
     private Date date;
     private int waitingTime;
 
-    public WaitingTimeline(int indexNumber, String[] params) throws ParseException {
+    public WaitingTimeline(int indexNumber, String[] timelineParams) throws ParseException {
         this.indexNumber = indexNumber;
-        serviceId = params[1];
-        questionTypeId = params[2];
-        responseType = params[3];
-        date = new SimpleDateFormat("dd.MM.yyyy").parse(params[4]);
-        waitingTime = Integer.parseInt(params[5]);
+        serviceId = timelineParams[1];
+        questionTypeId = timelineParams[2];
+        responseType = timelineParams[3];
+        date = new SimpleDateFormat("dd.MM.yyyy").parse(timelineParams[4]);
+        waitingTime = Integer.parseInt(timelineParams[5]);
     }
 
     public String getServiceId() {
